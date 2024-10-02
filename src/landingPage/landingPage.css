@@ -1,0 +1,28 @@
+.hero-container {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Set the minimum height to cover navbar and hero */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Make the navbar transparent */
+.navbar {
+    background-color: transparent; /* Make the navbar background transparent */
+    position: absolute; /* Position it at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Make sure navbar stays on top */
+}
+
+/* Optional: Add padding/margin to ensure content does not overlap */
+.hero-content {
+    padding-top: 60px; /* Offset for navbar height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white; /* Text color to contrast with the background */
+}

@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  background-color: #F8F8F8;
+}
+.bg-base {
+  background-color: #F8F8F8;
+}
+.text-green-300 {
+  color: #00444E;
+}
+.bg-green-300 {
+  background-color: #00444E;
+}
+.max-w-content {
+  max-width: 39.425rem;
+}
+.fs-7 {
+  font-size: 0.875rem;
+}
+.my-10 {
+  margin: 5rem 0;
+}
+.avatar {
+  vertical-align: middle;
+  border-radius: 50%;
+}
+
+.poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.max-w-base {
+  max-width: 90rem;
+}
+
+.brand-logo {
+  transform: scale(0.6);
+  margin-left: -3rem;
+}
+
+@media (min-width: 768px) {
+  .brand-logo {
+    transform: scale(1);
+    margin-left: 0;
+  }
+  .my-10 {
+    margin: 10rem 0;
+  }  
+}
