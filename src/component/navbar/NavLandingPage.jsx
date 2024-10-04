@@ -13,7 +13,7 @@ export const NavLandingPage = () => {
     const hash = location.hash
     return(
         <header >
-            <nav className="navbar navbar-expand-lg fixed-top py-3 px-3 px-md-4 px-xxl-0 bg-primary-subtle">
+            <nav className="navbar navbar-expand-lg fixed-top py-3 px-3 px-md-4 px-xxl-0 bg-light">
                 <div className="container-xxl d-flex flex-row justify-content-between px-0">
                     <img
                         width={231}

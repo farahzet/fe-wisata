@@ -3,6 +3,7 @@ import Gudeg from "../../assets/gudeg.png"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { FaStar } from 'react-icons/fa';
 
 export const CardFood = () => {
 
@@ -53,7 +54,7 @@ export const CardFood = () => {
             </h2>
             <Slider {...settings}>
                 {listPlace.map((item, index) => (
-                <div key={index} className="card-container">
+                <div key={index} onClick={() => onNavigate(item)} className="card-container">
                     <div
                     className="card"
                     style={{
@@ -71,7 +72,13 @@ export const CardFood = () => {
                         color: "white",
                     }}
                     >
-                    <h5 className="card-title">{item.title}</h5>
+                    <div className='d-flex'>
+                        <h5 className="card-title me-auto">{item.title}</h5>
+                        <b>4,5</b>
+                        <div className = 'justify-align-center '>
+                            <FaStar />
+                        </div>
+                    </div>
                     <p className="card-text">{item.content}</p>
                     </div>
                 </div>
