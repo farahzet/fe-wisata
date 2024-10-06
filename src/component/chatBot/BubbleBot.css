@@ -1,0 +1,30 @@
+.bubble {
+    border-radius: 8px;
+    padding: 10px;
+    max-width: 100%;
+    margin-bottom: 10px;
+    /* position: relative; */
+}
+
+.user-message {
+    background-color: #d1e7dd;
+    /* Warna latar belakang untuk pesan pengguna */
+    align-self: flex-end;
+    /* margin-left: auto; */
+}
+
+.bot-message {
+    background-color: #f8d7da;
+    /* Warna latar belakang untuk pesan bot */
+    /* align-self: flex-start; */
+}
+
+.bubble p {
+    margin: 0;
+}
+
+.bubble small {
+    display: block;
+    text-align: right;
+    color: #6c757d;
+}

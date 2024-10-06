@@ -10,16 +10,20 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "axios": "^1.7.7",
     "bootstrap": "^5.3.3",
+    "dompurify": "^3.1.7",
     "js-cookie": "^3.0.5",
     "react": "^18.2.0",
+    "react-chatbot": "^0.0.1",
     "react-dom": "^18.2.0",
     "react-icons": "^5.3.0",
     "react-router-dom": "^6.26.2",
     "react-slick": "^0.30.2",
     "react-toastify": "^10.0.5",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "wowjs": "^1.1.3"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

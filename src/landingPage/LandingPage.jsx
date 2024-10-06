@@ -1,11 +1,13 @@
 import { Hero } from "../component/hero/Hero"
 import { NavLandingPage } from "../component/navbar/NavLandingPage"
-import { CardPlace } from "../component/CardPlace/CardPlace"
+import { CardPlace } from "../component/cardPlace/CardPlace"
 import Banner from "../assets/banner.jpeg"
-import { CardFood } from "../component/CardPlace/CardFood"
+import { CardFood } from "../component/cardFood/CardFood"
 import { Footer } from "../component/footer/Footer"
 import { DescFood } from "../component/Description/DescFood"
 import kopi from '../assets/kopiKlothok.jpg'
+import { CardHotel } from "../component/cardHotel/CardHotel"
+import { ChatIcon } from "../component/chatBot/ChatIcon"
 
 export const LandingPage = () => {
     return(
@@ -13,15 +15,12 @@ export const LandingPage = () => {
        
         <NavLandingPage />
         <main className='mt-md-5 mt-xl-0'>
-            {/* <Hero 
-                idSection={'mainHero'}
-                heading="Time To Trip"
-                text="Temukan Destinasi Wisata Anda Disini, Rasakan Kebahagiaan Tiada Tara di Setiap Tujuan Wisata!  "
-            />
              <CardPlace />
-             <CardFood /> */}
+             <CardFood />
+             <CardHotel />
+             <ChatIcon />
 
-        <DescFood 
+        {/* <DescFood 
             idSection={'mainHero'}
             isReverse={false}
             image={kopi}
@@ -31,7 +30,7 @@ export const LandingPage = () => {
             location="Jalan Kaliurang Km 16, Area Sawah, Pakembinangun, Kec. Pakem, Kabupaten Sleman, Daerah Istimewa Yogyakarta"
             Parking="Tersedia Tempat Parking"
             Price=" 10.000 - 15.000"
-        />
+        /> */}
 
 
         </main>

@@ -3,6 +3,9 @@ import Tugu from "../../assets/tugu.png"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { useEffect } from 'react';
+import WOW from "wowjs";
+import "animate.css";
 
 export const CardPlace = () => {
     const listPlace = [
@@ -13,23 +16,19 @@ export const CardPlace = () => {
         { img: Tugu, title: 'Yogyakarta', content: 'Tugu' },
     ]
 
-    // var settings = {
-    //     dots: true,
-    //     infinite: true,
-    //     speed: 500,
-    //     slidesToShow: 4,
-    //     slidesToScroll: 1,
-    //     autoplay: true,
-    //     autoplaySpeed: 3000,
-    // };
+    useEffect(() => {
+        new WOW.WOW().init();
+    }, []);
 
     const settings = {
         dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: 4,
-        slidesToScroll: 1, // Menggeser satu slide setiap kali scroll
-        adaptiveHeight: true, // Menyesuaikan tinggi slider dengan konten
+        swipeToSlide: true,   
+        touchMove: true,      
+        slidesToScroll: 1, 
+        adaptiveHeight: true, 
         responsive: [
         {
         breakpoint: 1024,
@@ -56,10 +55,15 @@ export const CardPlace = () => {
     };
 
     return (
-        <div className="slider-container">
-            <h2 className={`hero-title text-dark fw-bold sans-serif justify-content-center`}>
-                    Place To Visit
-            </h2>
+        <div id="PlaceCard" className="slider-container">
+            <div className = "overflow-hidden">
+            <div className="text-center wow animate__fadeInUp" data-wow-delay="0.1s">
+            <h6 className="section-title bg-white text-center text-dark px-3">
+            Destination
+            </h6>
+            <h1 className="mb-5">Place To Visit</h1>
+        </div>
+
             <Slider {...settings}>
                 {listPlace.map((item, index) => (
                 <div key={index} className="card-container">
@@ -70,7 +74,7 @@ export const CardPlace = () => {
                         backgroundSize: "cover",
                         backgroundPosition: "center",
                         backgroundRepeat: "no-repeat",
-                        width: "100%",
+                        width: "90%",
                         height: "25rem",
                         borderRadius: "10px",
                         display: "flex",
@@ -86,6 +90,8 @@ export const CardPlace = () => {
                 </div>
                 ))}
             </Slider>
+
+            </div>            
         </div>
     )
 }

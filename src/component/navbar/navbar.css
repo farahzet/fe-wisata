@@ -1,7 +1,9 @@
-.nav-item-a { 
+/* .nav-item-a { 
     text-decoration: none;
     text-decoration-thickness: 2px;
     color: #0F67B1;
+    outline: none;
+    transition: .5s;
 }
 .nav-item-a:hover {
     text-decoration: underline;
@@ -13,3 +15,159 @@
     text-decoration: none;
     border-bottom: 2px solid #00444E;
 }
+
+.hero-header {
+    background: linear-gradient(rgba(20, 20, 31, .7), rgba(20, 20, 31, .7)), url(../img/bg-hero.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+/* Navbar styling untuk layar besar */
+.navbar .navbar-nav .nav-item-a {
+  font-family: 'Nunito', sans-serif;
+  position: relative;
+  margin-right: 25px;
+  padding: 35px 0;
+  color: white !important;
+  font-size: 18px;
+  font-weight: 600;
+  outline: none;
+  transition: 0.5s;
+  text-decoration: none; 
+}
+
+/* Menghilangkan garis bawah di kondisi normal */
+.navbar .navbar-nav .nav-item-a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px; /* Atur posisi di bawah teks */
+  left: 50%;
+  background: var(--primary); /* Warna garis bawah saat hover */
+  transition: width 0.4s ease, left 0.4s ease;
+}
+
+/* Warna hover dan efek garis bawah */
+.navbar .navbar-nav .nav-item-a:hover::before {
+  width: 100%;  /* Garis bawah muncul saat hover */
+  left: 0;
+}
+
+/* Warna hover pada teks */
+.navbar .navbar-nav .nav-item-a:hover {
+  color: var(--primary) !important;  /* Warna teks berubah saat hover */
+}
+
+/* Styling item aktif */
+.navbar .navbar-nav .nav-item-active {
+  color: var(--primary) !important;  /* Warna teks untuk item aktif */
+}
+
+.navbar .navbar-nav .nav-item-active::before {
+  width: 100%;  /* Garis bawah tetap untuk item aktif */
+  left: 0;
+}
+
+/* Media query untuk ukuran layar kecil */
+@media (max-width: 991.98px) {
+  .navbar {
+    background-color: #FFFFFF; /* Atur background navbar */
+  }
+
+  /* Styling link pada layar kecil */
+  .navbar .navbar-nav .nav-item-a,
+  .sticky-top .navbar .navbar-nav .nav-item-a {
+    padding: 10px 0;
+    margin-left: 0;
+    color: var(--dark) !important;
+    text-decoration: none; /* Pastikan tanpa garis bawah default */
+  }
+
+  /* Efek garis bawah pada hover di layar kecil */
+  .navbar .navbar-nav .nav-item-a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 7px;
+    left: 50%;
+    background: var(--primary); /* Warna garis saat hover */
+    transition: width 0.4s ease, left 0.4s ease;
+  }
+
+  .navbar .navbar-nav .nav-item-a:hover::before {
+    width: 100%;
+    left: 0;
+  }
+
+  .navbar .navbar-nav .nav-item-a:hover {
+    color: var(--primary) !important;
+  }
+
+  .navbar .navbar-nav .nav-item-active::before {
+    width: 100%;
+    left: 0;
+  }
+}
+
+/* Media query untuk ukuran layar besar */
+@media (min-width: 992px) {
+  .navbar {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid rgba(256, 256, 256, 0.1);
+    z-index: 999;
+  }
+
+  /* Sticky navbar di layar besar */
+  .sticky-top .navbar {
+    position: fixed;
+    background: #FFFFFF;
+  }
+
+  /* Garis bawah saat hover untuk layar besar */
+  .navbar .navbar-nav .nav-item-a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 30px;
+    left: 50%;
+    background: var(--primary); /* Warna garis bawah */
+    transition: width 0.4s ease, left 0.4s ease;
+  }
+
+  .navbar .navbar-nav .nav-item-a:hover::before {
+    width: 100%;
+    left: 0;
+  }
+
+  .navbar .navbar-nav .nav-item-a:hover {
+    color: var(--primary) !important;
+  }
+
+  .navbar .navbar-nav .nav-item-active::before {
+    width: 100%;
+    left: 0;
+  }
+}
+
+.navbar-scrolled {
+  background-color: #fff !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Shadow untuk efek */
+}
+
+.navbar-scrolled .navbar-nav .nav-item-a {
+  color: green !important; /* Warna hijau saat navbar di-scroll */
+}
+.hero-header {
+  background: linear-gradient(rgba(20, 20, 31, 0.7), rgba(20, 20, 31, 0.7)), url('../../assets/tugu.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
