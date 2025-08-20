@@ -9,7 +9,7 @@ import "./ChatBot.css";
 import useShortcutKeyboard from "../Hooks/useShortcutKeyboard";
 import axios from "axios";
 import { BubbleBot } from "./BubbleBot";
-// import { prompt } from "../../Utils/ChatAI";
+import { prompt } from "../../utils/ChatAI";
 
 
 export const Chatbot = () => {
@@ -63,8 +63,8 @@ export const Chatbot = () => {
         const aiResponse =
             response.data.candidates && response.data.candidates.length > 0
             ? response.data.candidates[0]?.content?.parts[0]?.text ||
-                "Maaf, saya tidak dapat menemukan jawaban untuk pertanyaan Anda saat ini. Untuk informasi lebih lanjut, silakan hubungi admin sekolah kami."
-            : "Maaf, saya tidak dapat menemukan jawaban untuk pertanyaan Anda saat ini. Untuk informasi lebih lanjut, silakan hubungi admin sekolah kami."; // Default message
+                "Maaf, saya tidak dapat menemukan jawaban untuk pertanyaan Anda saat ini."
+            : "Maaf, saya tidak dapat menemukan jawaban untuk pertanyaan Anda saat ini."; // Default message
 
         // Log the extracted response
         console.log("Extracted AI Response:", aiResponse);
@@ -98,7 +98,7 @@ export const Chatbot = () => {
             {
                 author: "bot",
                 content:
-                "Maaf, saya tidak dapat menemukan jawaban untuk pertanyaan Anda saat ini. Untuk informasi lebih lanjut, silakan hubungi admin sekolah kami",
+                "Maaf, saya tidak dapat menemukan jawaban untuk pertanyaan Anda saat ini.",
                 date: new Date(),
                 type: "text",
             },

@@ -5,20 +5,58 @@
     --dark: #14141F;
 }
 
-.slider-container {
-    width: 90%; /* Adjust width as needed */
-    margin: auto;
-    padding: 40px 0;
+@keyframes slideUp {
+    0% {
+    transform: translateY(50px);
+    opacity: 0;
+}
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
-.card-container {
-    padding: 0 10px; /* To add space between cards */
+.slider-container {
+    width: 90%;
+    margin: auto;
+    position: relative;
+    overflow: hidden; /* Ubah dari hidden ke visible agar tombol terlihat */
+    padding: 0 50px;
+    margin-bottom: 50px;
 }
+
+.slick-prev,
+.slick-next {
+    z-index: 2; /* Naikkan z-index agar tombol berada di atas konten */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.slick-prev {
+    left: -50px; /* Atur tombol prev lebih ke kiri agar keluar dari slider */
+}
+
+.slick-next {
+    right: -50px; /* Atur tombol next lebih ke kanan agar keluar dari slider */
+}
+
+
 
 .card {
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease; /* Smooth transition */
-    overflow: hidden; /* Ensures zoom doesn't overflow */
+    margin: 0 10px;
+    transition: transform 0.2s;
+    width: 100%; /* Ensure cards take full width of their parent */
+}
+
+
+.card.show {
+    animation: slideUp 0.5s forwards;
 }
 
 .card:hover {
@@ -53,19 +91,6 @@ pointer-events: none; /* Agar swipe tidak terhalang oleh klik pada gambar */
 .slick-slider {
     cursor: default;
 }
-
-
-/* .slider-container {
-    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
-}
-
-.slider-container img {
-    transition: .5s;
-}
-
-.slider-container:hover img {
-    transform: scale(1.1);
-} */
 
 .section-title {
     position: relative;
@@ -108,7 +133,6 @@ pointer-events: none; /* Agar swipe tidak terhalang oleh klik pada gambar */
 .wow {
     visibility: hidden;
 }
-
 
 @media (min-width: 576px) {
     .kotak {

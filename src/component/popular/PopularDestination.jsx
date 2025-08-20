@@ -1,5 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import kopi from "../../assets/kopiKlothok.jpg";
+import Tugu from "../../assets/tugu.png";
+import parangtritis from "../../assets/parangtritis.jpg"
+import Hotel from "../../assets/ambarukmo.jpg"
 import "./popularDestination.css";
 import "animate.css"; // Pastikan untuk mengimpor animate.css jika Anda menginstalnya
 
@@ -7,30 +10,30 @@ export const PopularDestination = () => {
   const destinations = [
     {
       id: 1,
-      image: kopi,
-      discount: "30% OFF",
-      location: "Thailand",
+      image: Tugu,
+      name: "Tugu Yogyakarta",
+      location: "Jetis,Yogyakarta",
       delay: "0.1s",
     },
     {
       id: 2,
-      image: kopi,
-      discount: "25% OFF",
-      location: "Malaysia",
+      image: Hotel,
+      name: "Royal Malioboro by Aston",
+      location: "Kota Yogyakarta",
       delay: "0.3s",
     },
     {
       id: 3,
-      image: kopi,
-      discount: "35% OFF",
-      location: "Australia",
+      image: parangtritis,
+      name: "Pantai Parangtritis",
+      location: "Bantul,Yogyakarta",
       delay: "0.5s",
     },
     {
       id: 4,
       image: kopi,
-      discount: "20% OFF",
-      location: "Indonesia",
+      name: "Kopi Klothok",
+      location: "Sleman,Yogyakarta",
       delay: "0.7s",
     },
   ];
@@ -109,7 +112,7 @@ export const PopularDestination = () => {
                       alt={destination.location}
                     />
                     <div className="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">
-                      {destination.discount}
+                      {destination.name}
                     </div>
                     <div className="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">
                       {destination.location}

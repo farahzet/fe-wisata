@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./ChatBot"
 import "./chatBot.css";
-import BotIcon from "../../assets/bubble.png";
+import BotIcon from "../../assets/bubble2.svg";
 import { Chatbot } from "./ChatBot";
 
 export const ChatIcon = () => {

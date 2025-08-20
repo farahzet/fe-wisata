@@ -1,6 +1,8 @@
 import './navbar.css'
 import { useLocation } from "react-router-dom"
 import React, { useState, useEffect } from 'react'
+import Logo from "../../assets/logo.svg"
+import LogoScrolled from "../../assets/logo2.svg";
 
 export const NavLandingPage = () => {
     const labels = [
@@ -35,6 +37,7 @@ export const NavLandingPage = () => {
 
     const location = useLocation()
     const hash = location.hash
+    
     return(
         <header >
             <nav className={`navbar navbar-expand-lg fixed-top py-3 px-3 px-md-4 px-xxl-0 ${isSticky ? 'navbar-scrolled' : ''}`}>
@@ -42,7 +45,7 @@ export const NavLandingPage = () => {
                     <img
                         width={231}
                         height={62}
-                        // src={Logo}
+                        src={isSticky ? LogoScrolled : Logo}
                         // alt="Place"
                         className="brand-logo" />
                     <button
@@ -80,7 +83,7 @@ export const NavLandingPage = () => {
                     <div className="col-lg-10 pt-lg-5 mt-lg-5 text-center">
                         <h1 className="display-3 text-white mb-3 animated slideInDown fw-semibold">
                         {" "}
-                        Time To Trip
+                        Time To Travel
                         </h1>
                         <p className="fs-4 text-white mb-4 animated slideInDown">
                         Temukan Destinasi Wisata Anda Disini, Rasakan Kebahagiaan Tiada Tara di Setiap Tujuan Wisata!
